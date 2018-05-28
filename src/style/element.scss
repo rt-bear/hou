@@ -1,3 +1,17 @@
 .el-menu-item{
     padding:0 45px;
+    color: #333;
+    font-size: 16px;
+}
+.el-carousel__container{
+    min-height:403px;
+}
+.el-menu--horizontal>.el-menu-item.is-active, .el-menu--horizontal>.el-menu-item{
+    border:none;
+}
+.el-menu--horizontal .el-menu-item:not(.is-disabled):focus, .el-menu--horizontal .el-menu-item:not(.is-disabled):hover{
+    color:#409EFF
+}
+.el-menu--horizontal>.el-menu-item.is-active{
+    color:#409EFF
 }

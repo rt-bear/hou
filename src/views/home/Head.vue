@@ -36,7 +36,7 @@ export default {
   name: 'Head',
   data () {
     return {
-      activeIndex: 1
+      activeIndex: '1'
     }
   },
   methods: {
@@ -52,6 +52,8 @@ export default {
   position: fixed;
   top:0;
   width:100%;
+  z-index: 1000;
+  background: #fff;
 }
 .logo{
   padding-left: 10vw;
