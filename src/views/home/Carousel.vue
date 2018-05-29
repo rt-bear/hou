@@ -1,9 +1,9 @@
 <template>
   <div id="carousel">
     <el-carousel>
-      <el-carousel-item><img src="@/assets/Carousel/banner01.jpg" alt=""></el-carousel-item>
-      <el-carousel-item><img src="@/assets/Carousel/banner02.jpg" alt=""></el-carousel-item>
-      <el-carousel-item><img src="@/assets/Carousel/banner03.jpg" alt=""></el-carousel-item>
+      <el-carousel-item><img src="http://p9hf7mh5h.bkt.clouddn.com/banner01.jpg" alt=""></el-carousel-item>
+      <el-carousel-item><img src="http://p9hf7mh5h.bkt.clouddn.com/banner02.jpg" alt=""></el-carousel-item>
+      <el-carousel-item><img src="http://p9hf7mh5h.bkt.clouddn.com/banner03.jpg" alt=""></el-carousel-item>
     </el-carousel>
   </div>
 </template>
