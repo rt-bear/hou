@@ -13,6 +13,11 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: $import('home')
+    },
+    {
+      path: '/home',
+      name: 'Home',
+      component: $import('home')
     }
   ]
 })
