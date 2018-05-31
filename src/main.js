@@ -9,6 +9,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import './style/element.scss'
 import '@/assets/font/iconfont.css'
+import 'lib-flexible/flexible'
 
 Vue.config.productionTip = false
 
