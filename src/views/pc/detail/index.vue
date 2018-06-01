@@ -1,12 +1,15 @@
 <template>
   <div>
-    我是Program
+      detail
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'Program',
+  name: 'Detail',
+  components: {
+  },
   data () {
     return {
     }
