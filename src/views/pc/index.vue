@@ -1,12 +1,22 @@
 <template>
   <div>
-    我是Footer
+    <Head></Head>
+    <router-view/>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+
+import Head from './Head'
+import Footer from './Footer'
+
 export default {
-  name: 'Footer',
+  name: 'Home',
+  components: {
+    Head,
+    Footer
+  },
   data () {
     return {
     }

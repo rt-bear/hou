@@ -7,15 +7,21 @@
 <script>
 export default {
   name: 'App',
+  data () {
+    return {
+      screenWidth: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    }
+  },
   mounted () {
     this.initSreen()
   },
   methods: {
     initSreen () {
-      if (this.IsPC) {
-        this.$router.push('/home')
+      console.log()
+      if (this.IsPC && this.screenWidth >= 1024) {
+        this.$router.push('/pc/home')
       } else {
-        window.alert(1)
+        this.$router.push('/mobile/home')
       }
     },
     IsPC () {
