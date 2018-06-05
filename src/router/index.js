@@ -10,6 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/pc/home',
       name: 'default',
       component: $import('pc')
     },
