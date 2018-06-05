@@ -14,14 +14,33 @@ export default {
   },
   mounted () {
     this.initSreen()
+    const that = this
+    window.onresize = () => {
+      return (() => {
+        window.screenWidth = document.body.clientWidth
+        that.screenWidth = window.screenWidth
+      })()
+    }
+  },
+  watch: {
+    screenWidth () {
+      this.watchSreen()
+    }
   },
   methods: {
     initSreen () {
-      console.log()
       if (this.IsPC && this.screenWidth >= 1024) {
         this.$router.push('/pc/home')
       } else {
         this.$router.push('/mobile/home')
+      }
+    },
+    watchSreen () {
+      const path = this.$route.path
+      if (this.IsPC && this.screenWidth >= 1024) {
+        this.$router.push(path.replace('mobile', 'pc'))
+      } else {
+        this.$router.push(path.replace('pc', 'mobile'))
       }
     },
     IsPC () {
