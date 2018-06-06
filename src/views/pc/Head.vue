@@ -7,9 +7,9 @@
         </div>
       </el-col>
       <el-col :span="14">
-        <el-menu router :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu router unique-opened :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
           <el-menu-item v-if="item.children.length === 0" v-for="item in headJson" :index="item.index" :key="item.index">{{item.name}}</el-menu-item>
-          <el-submenu v-else index="item.index" popper-class="center_item" :key="item.index">
+          <el-submenu v-else :index="item.index" popper-class="center_item">
             <template slot="title">{{item.name}}</template>
              <el-menu-item v-for="child in item.children" :index="child.index" :key="child.index">{{child.name}}</el-menu-item>
           </el-submenu>
