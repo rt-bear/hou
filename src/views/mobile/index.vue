@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Head></Head>
+  <div @click="closeMenu">
+    <Head ref="mobilehead"></Head>
     <router-view/>
     <Footer></Footer>
   </div>
@@ -19,6 +19,11 @@ export default {
   },
   data () {
     return {
+    }
+  },
+  methods: {
+    closeMenu () {
+      this.$refs.mobilehead.menuShow = false
     }
   }
 }

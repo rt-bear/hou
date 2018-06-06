@@ -1,25 +1,23 @@
 <template>
   <div id="head" class="main">
-    <div style="display:flex;justify-content:space-between;transform: translateY(0);">
+    <div style="display:flex;justify-content:space-between;">
       <section class="logo">
         <img class="logo_img" src="@/assets/head/mobile_logo.jpg" alt="">
       </section>
       <section style="padding: 1.5vh 3vw; position:relative">
-        <i class="iconfont icon-menu logo_icon" @click="openMenu"></i>
+        <i class="iconfont icon-menu logo_icon" @click.stop="openMenu"></i>
       </section>
     </div>
-    <transition name="fade">
-      <div class="verticalMenu" v-if="menuShow">
-        <el-menu router :default-active="activeIndex" class="el-menu-demo" mode="vertical" @select="handleSelect"
-        background-color="#00000066" text-color="#fff" active-text-color="#ffd04b">
-          <el-menu-item v-if="item.children.length === 0" v-for="item in headJson" :index="item.index" :key="item.index">{{item.name}}</el-menu-item>
-          <el-submenu v-else index="item.index" popper-class="center_item" :key="item.index">
-            <template slot="title">{{item.name}}</template>
-              <el-menu-item v-for="child in item.children" :index="child.index" :key="child.index">{{child.name}}</el-menu-item>
-          </el-submenu>
-        </el-menu>
-      </div>
-    </transition>
+    <div class="verticalMenu" v-if="menuShow" @click.stop>
+      <el-menu router :default-active="activeIndex" class="el-menu-demo" mode="vertical" @select="handleSelect"
+      background-color="#00000066" text-color="#fff" active-text-color="#ffd04b">
+        <el-menu-item v-if="item.children.length === 0" v-for="item in headJson" :index="item.index" :key="item.index">{{item.name}}</el-menu-item>
+        <el-submenu v-else :index="item.index" popper-class="center_item" :key="item.index">
+          <template slot="title">{{item.name}}</template>
+            <el-menu-item v-for="child in item.children" :index="child.index" :key="child.index">{{child.name}}</el-menu-item>
+        </el-submenu>
+      </el-menu>
+    </div>
   </div>
 </template>
 
@@ -36,12 +34,6 @@ export default {
     }
   },
   mounted () {
-    // const _this = this
-    // document.addEventListener('click', function () {
-    //   if (_this.menuShow) {
-    //     console.log(_this.menuShow)
-    //   }
-    // })
   },
   methods: {
     handleSelect (key, keyPath) {
@@ -49,7 +41,7 @@ export default {
       this.menuShow = false
     },
     openMenu () {
-      this.menuShow = true
+      this.menuShow = !this.menuShow
     }
   }
 }
@@ -82,18 +74,6 @@ export default {
 .verticalMenu{
   width:100%;
   position: absolute;
-  transform: translateY(0);
-  opacity: 1;
-}
-.fade-enter-active {
-  transition: all .3s ease;
-}
-.fade-leave-active {
-  transition: all .3s ease;
-}
-.fade-enter, .slide-fade-leave-to
-{
-  transform: translateY(-7.5vh);
   opacity: 1;
 }
 </style>
