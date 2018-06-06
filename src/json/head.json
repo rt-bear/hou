@@ -1,0 +1,14 @@
+[
+  {"index": "home", "name": "我们", "children": []},
+  {"index": "2",
+    "name": "主要产品",
+    "children": [
+      {"index": "2-1", "name": "实践教学管理系统"},
+      {"index": "2-2", "name": "专业教学资源库平台"},
+      {"index": "2-3", "name": "云课堂系统"},
+      {"index": "2-4", "name": "职教云平台"}
+    ]},
+  {"index": "4", "name": "职教研究", "children": []},
+  {"index": "5", "name": "案例", "children": []}
+]
+
