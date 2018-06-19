@@ -1,7 +1,7 @@
 
 function $import (file) {
-  return () =>
-    import(`views/${file}`)
+  return resolve => require([`views/${file}`], resolve)
+  // import(`views/${file}`)
 }
 
 export {
