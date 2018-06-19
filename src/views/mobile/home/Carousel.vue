@@ -1,6 +1,6 @@
 <template>
   <div id="carousel">
-    <el-carousel>
+    <el-carousel height="112px">
       <el-carousel-item><img src="http://p9hf7mh5h.bkt.clouddn.com/banner01.jpg" alt=""></el-carousel-item>
       <el-carousel-item><img src="http://p9hf7mh5h.bkt.clouddn.com/banner02.jpg" alt=""></el-carousel-item>
       <el-carousel-item><img src="http://p9hf7mh5h.bkt.clouddn.com/banner03.jpg" alt=""></el-carousel-item>
@@ -21,10 +21,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 #carousel{
-  margin-top:60px;
+  margin-top: calc(40px + 3vh);
   img{
     width:100%;
-    height:auto
+    height:auto;
   }
 }
 </style>

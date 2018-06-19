@@ -1,5 +1,5 @@
 <template>
-  <div id="carousel">
+  <div id="pc_carousel">
     <el-carousel>
       <el-carousel-item><img src="http://p9hf7mh5h.bkt.clouddn.com/banner01.jpg" alt=""></el-carousel-item>
       <el-carousel-item><img src="http://p9hf7mh5h.bkt.clouddn.com/banner02.jpg" alt=""></el-carousel-item>
@@ -19,12 +19,15 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-#carousel{
+<style lang="scss">
+#pc_carousel{
   margin-top:60px;
   img{
     width:100%;
     height:auto
+  }
+  .el-carousel__container{
+      min-height:403px;
   }
 }
 </style>
