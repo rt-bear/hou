@@ -46,6 +46,7 @@ export default {
   position: fixed;
   bottom: 100px;
   right:50px;
+  cursor: pointer;
 }
 .icon_top{
   display: block;
