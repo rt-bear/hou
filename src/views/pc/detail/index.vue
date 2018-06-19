@@ -1,14 +1,18 @@
 <template>
-  <div>
-      detail
+  <div id="pc_detail">
+      <AboutCompany></AboutCompany>
   </div>
 </template>
 
 <script>
+import AboutCompany from './AboutCompany'
+import anchor from '@/mixins/anchor'
 
 export default {
   name: 'Detail',
+  mixins: [anchor],
   components: {
+    AboutCompany
   },
   data () {
     return {
@@ -18,6 +22,12 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style lang="scss" scoped>
+#pc_detail{
+  margin-top:60px;
+  img{
+    width:100%;
+    height:auto
+  }
+}
 </style>
