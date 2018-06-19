@@ -3,6 +3,7 @@
     <Head></Head>
     <router-view/>
     <Footer></Footer>
+    <Tool></Tool>
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 
 import Head from './Head'
 import Footer from './Footer'
+import Tool from './Tool'
 
 export default {
   name: 'Home',
   components: {
     Head,
-    Footer
+    Footer,
+    Tool
   },
   data () {
     return {
