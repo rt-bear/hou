@@ -3,7 +3,7 @@
     <Carousel></Carousel>
     <Business></Business>
     <Product></Product>
-    <Cases></Cases>
+    <!-- <Cases></Cases> -->
   </div>
 </template>
 
@@ -12,15 +12,15 @@
 import Carousel from './Carousel'
 import Business from './Business'
 import Product from './Product'
-import Cases from './Cases'
+// import Cases from './Cases'
 
 export default {
   name: 'Home',
   components: {
     Carousel,
     Business,
-    Product,
-    Cases
+    Product
+    // Cases
   },
   data () {
     return {
