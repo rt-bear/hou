@@ -11,8 +11,7 @@ export default {
     title: '大连春藤科技',
     meta: [
       {name: 'description', content: '春藤科技是一家专注于职业教育专业建设、数字资源开发、互联网服务运营，教育信息化，教育软件研发的创新型教育科技公司。致力于用互联网思维和前沿信息技术改造传统教育，对教育技术、教学方法、虚拟仿真技术进行创新性的研发与应用。'},
-      {name: 'keywords', content: '春藤,教育,互联网运营'},
-      {name: 'baidu-site-verification', content: 'jT3qVZXWCW'}
+      {name: 'keywords', content: '春藤,教育,互联网运营'}
     ]
   },
   data () {
