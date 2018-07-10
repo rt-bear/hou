@@ -13,6 +13,15 @@
               <div v-for="item in aboutCompany" :key="item.index" :id="item.index">
                   <h2 class="c_title">{{item.title}}</h2>
                   <p class="c_content">{{item.content}}</p>
+                  <div v-for="(child, index) in item.children" :key="'child' + index" style="margin-bottom: 20px;">
+                      <h3 class="font_size_h3" style="line-height:40px;color:#333">{{child.title}}</h3>
+                      <ul>
+                          <li v-for="(txt, index) in child.content" :key="'txt' + index" class="c_link">
+                              <span style="font-family:Wingdings">Ø</span>
+                              <a class="c_link_a font_size_h4" :href="txt.link" target="_blank">{{txt.text}}</a>
+                          </li>
+                      </ul>
+                  </div>
               </div>
           </section>
       </div>
@@ -65,6 +74,22 @@ export default {
         font-size: 16px;
         margin-bottom: 20px;
         font-weight: 200;
+        text-indent: 2em;
+    }
+    .c_link{
+        line-height: 30px;
+        list-style: none;
+        text-indent: 3em;
+        &:hover{
+            color:#99cc33;
+        }
+    }
+    .c_link_a{
+        text-decoration: none;
+        color:#555;
+        &:hover{
+            color:#99cc33;
+        }
     }
 }
 </style>

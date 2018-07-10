@@ -1,0 +1,42 @@
+/* 改变主题色变量 */
+$--color-primary: #99cc33;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+.el-menu-item{
+    padding:0 45px;
+    color: #333;
+    font-size: 18px;
+}
+.el-submenu__title{
+    font-size: 18px;
+}
+.el-menu--horizontal>.el-menu-item.is-active, .el-menu--horizontal>.el-menu-item, .el-menu--horizontal{
+    border:none;
+}
+.el-menu--horizontal .el-menu-item:not(.is-disabled):focus, .el-menu--horizontal .el-menu-item:not(.is-disabled):hover{
+    color:#99cc33;
+}
+.el-menu--horizontal>.el-menu-item.is-active{
+    color:#99cc33;
+}
+.el-menu--horizontal > .el-submenu:focus .el-submenu__title, .el-menu--horizontal > .el-submenu:hover .el-submenu__title{
+    color:#99cc33;
+}
+.font_size_h1{
+    font-size: 24px;
+}
+.font_size_h2{
+    font-size: 20px;
+}
+.font_size_h3{
+    font-size: 16px;
+}
+.font_size_h4{
+    font-size: 14px;
+}
+.font_size_h5{
+    font-size: 12px;
+}

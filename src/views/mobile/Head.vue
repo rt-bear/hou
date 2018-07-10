@@ -2,7 +2,7 @@
   <div id="head" class="main">
     <div style="display:flex;justify-content:space-between;">
       <section class="logo">
-        <img class="logo_img" src="@/assets/head/mobile_logo.jpg" alt="">
+        <!-- <img class="logo_img" src="@/assets/head/mobile_logo.jpg" alt=""> -->
       </section>
       <section style="padding: 1.5vh 3vw; position:relative">
         <i class="iconfont icon-menu logo_icon" @click.stop="openMenu"></i>
