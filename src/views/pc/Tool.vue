@@ -1,7 +1,7 @@
 <template>
   <div id="tool">
       <section>
-          <div class="toTop" v-show="toTopStatus" @click="toTop()"><i class="iconfont icon-topt01 icon_top"></i></div>
+          <div class="toTop" v-show="toTopStatus" @click="toTop()"><i class="iconfont icon-top icon_top"></i></div>
       </section>
   </div>
 </template>

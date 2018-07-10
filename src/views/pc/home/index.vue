@@ -1,7 +1,7 @@
 <template>
   <div>
     <Carousel></Carousel>
-    <Business></Business>
+    <!-- <Business></Business> -->
     <Product></Product>
     <Cases></Cases>
   </div>
