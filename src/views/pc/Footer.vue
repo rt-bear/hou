@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div style="width:100%;margin-bottom:10px;">
-      <el-row class="font_size_h3" style="margin-bottom:10px;">
+      <el-row class="font_size_h3" style="margin-bottom:10px;color:#fff;">
         <el-col :span="4" :offset="2" class="font_size_h3">关于我们</el-col>
         <el-col :span="4" >产品服务</el-col>
         <el-col :span="4" >解决方案</el-col>
@@ -73,8 +73,8 @@ export default {
   line-height: 25px;
   text-align: center;
   padding:20px 0 10px;
-  color: #ccc;
-  background: #06060b;
+  color: #9d9d9e;
+  background: #272636;
   span{
     font-size: 14px;
   }

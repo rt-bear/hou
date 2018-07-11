@@ -1,7 +1,7 @@
 <template>
   <div id="AboutCompany">
       <section>
-        <img src="http://p9hf7mh5h.bkt.clouddn.com/banner01.jpg" alt="">
+        <img src="http://p9hf7mh5h.bkt.clouddn.com/%E9%A6%96%E9%A1%B5-%E6%95%99%E8%82%B2%E4%BF%A1%E6%81%AF%E5%8C%96%E5%BB%BA%E8%AE%BE.jpg" alt="">
       </section>
       <div class="container">
           <aside>
