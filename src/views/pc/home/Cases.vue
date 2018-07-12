@@ -1,22 +1,30 @@
 <template>
   <div>
-    <p class="title">解决方案</p>
+    <p class="title">解 决 方 案</p>
     <el-row class="content">
-      <el-col :span="8" v-for="(_case, index) in caseJson" :key="'case' + index" v-if="index < 3">
-        <section><i class="iconfont" :class="_case.icon"></i></section>
-        <section><p>{{_case.title}}</p></section>
-        <section><article>
-          {{_case.content}}
-        </article></section>
+      <el-col :span="8" v-for="(_case, index) in caseJson" :key="'case' + index" v-if="index < 3" >
+        <div class="container">
+          <div class="case_title">
+            <section><i class="iconfont" :class="_case.icon"></i></section>
+            <section><p class="c_title font_size_h1">{{_case.title}}</p></section>
+          </div>
+          <div class="case_desc">
+            <article class="c_content">{{_case.content}}</article>
+          </div>
+        </div>
       </el-col>
     </el-row>
     <el-row class="content mt50">
       <el-col :span="8" v-for="(_case, index) in caseJson" :key="'case2' + index" v-if="index >= 3">
-        <section><i class="iconfont" :class="_case.icon"></i></section>
-        <section><p>{{_case.title}}</p></section>
-        <section><article>
-          {{_case.content}}
-        </article></section>
+        <div class="container">
+          <div class="case_title">
+            <section><i class="iconfont" :class="_case.icon"></i></section>
+            <section><p class="c_title font_size_h1">{{_case.title}}</p></section>
+          </div>
+          <div class="case_desc">
+            <article class="c_content">{{_case.content}}</article>
+          </div>
+        </div>
       </el-col>
     </el-row>
   </div>
@@ -44,33 +52,42 @@ export default {
   text-align: center;
   line-height: 150px;
 }
+.container{
+  overflow: hidden;
+  width:350px;
+  height:200px;
+  margin:0 auto;
+  &:hover .case_title{
+    transform:translateY(-200px);
+  }
+  &:hover .case_desc{
+    transform:translateY(-200px);
+  }
+}
+.case_title{
+  height:200px;
+  padding-top:20px;
+  box-sizing: border-box;
+  color:#fff;
+  background: #99cc33;
+  margin-bottom: 10px;
+  transition: .5s all;
+  cursor: pointer;
+}
+.case_desc{
+  padding-top:20px;
+  box-sizing: border-box;
+  text-indent: 2em;
+  text-align: left;
+  font-size: 14px;
+  color:#555;
+  background: #fff;
+  transition: .5s all;
+}
 .content{
   text-align: center;
   .iconfont{
-    font-size:54px;
-  }
-  .icon-fanganzhizuo_huaban{
-    color:#36A0DA;
-  }
-  .icon-yanfa{
-    color:#00AE8C;
-  }
-  .icon-yunyingjingli-{
-    color:#E95532;
-  }
-  p{
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 8px;
-  }
-  article{
-    width:60%;
-    font-size: 14px;
-    font-weight: 200;
-    line-height: 22px;
-    text-align: center;
-    margin: 16px auto 0;
+    font-size:108px;
   }
 }
 .mt50{

@@ -63,6 +63,7 @@ export default {
   line-height: 20px;
   padding: 0 5px;
   text-indent: 2em;
+  color:#555;
   overflow:hidden;
   text-overflow:ellipsis;
   display:-webkit-box;

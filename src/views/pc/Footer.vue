@@ -72,6 +72,7 @@ export default {
   width: 100%;
   line-height: 25px;
   text-align: center;
+  margin-top:20px;
   padding:20px 0 10px;
   color: #9d9d9e;
   background: #272636;

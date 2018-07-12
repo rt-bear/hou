@@ -3,7 +3,7 @@
     <Head></Head>
     <router-view/>
     <Footer></Footer>
-    <Tool></Tool>
+    <!-- <Tool></Tool> -->
   </div>
 </template>
 
