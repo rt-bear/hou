@@ -1,18 +1,18 @@
 <template>
   <div id="AboutCompany">
       <section>
-        <img src="http://p9hf7mh5h.bkt.clouddn.com/%E9%A6%96%E9%A1%B5-%E6%95%99%E8%82%B2%E4%BF%A1%E6%81%AF%E5%8C%96%E5%BB%BA%E8%AE%BE.jpg" alt="">
+        <img src="http://p9hf7mh5h.bkt.clouddn.com/%E9%A6%96%E9%A1%B5-%E6%99%BA%E6%85%A7%E8%81%8C%E6%95%99%E4%BA%91%E5%B9%B3%E5%8F%B0.jpg" alt="">
       </section>
       <div class="container">
           <aside>
             <el-menu router unique-opened :default-active="activeIndex" class="el-menu-demo">
-            <el-menu-item v-for="item in aboutCompany" :index='"detail#" + item.index' :key="item.index">{{item.title}}</el-menu-item>
+            <el-menu-item v-for="item in aboutCompany" :index="'/pc/aboutCompany/#' + item.index" :key="item.index">{{item.title}}</el-menu-item>
             </el-menu>
           </aside>
           <section class="content">
               <div v-for="item in aboutCompany" :key="item.index" :id="item.index">
                   <h2 class="c_title">{{item.title}}</h2>
-                  <p class="c_content">{{item.content}}</p>
+                  <p class="c_content" v-for="(ct, index) in item.content.split('/n')" :key="'ct' + index">{{ct}}</p>
                   <div v-for="(child, index) in item.children" :key="'child' + index" style="margin-bottom: 20px;">
                       <h3 class="font_size_h3" style="line-height:40px;color:#333">{{child.title}}</h3>
                       <ul>
@@ -30,9 +30,11 @@
 
 <script>
 import ABOUTCOMPANY from '@/json/detail/aboutCompany.json'
+import anchor from '@/mixins/anchor'
 
 export default {
   name: 'AboutCompany',
+  mixins: [anchor],
   components: {
   },
   data () {
@@ -47,12 +49,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 #AboutCompany{
+    margin-top:60px;
     img{
         width:100%;
         height:auto
     }
     .container{
         width:100%;
+        max-width: 1200px;
+        margin:0 auto;
         margin-top:60px;
         display: flex;
         aside{

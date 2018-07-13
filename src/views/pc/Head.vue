@@ -15,10 +15,10 @@
       <el-col :span="14">
         <el-menu router unique-opened :default-active="activeIndex"
          class="el-menu-demo" mode="horizontal">
-          <el-menu-item v-if="item.children.length === 0" v-for="item in headJson" :index="item.index" :key="item.index">{{item.name}}</el-menu-item>
+          <el-menu-item v-if="item.children.length === 0" v-for="item in headJson" :index="'/pc/' + item.index" :key="item.index">{{item.name}}</el-menu-item>
           <el-submenu v-else :index="item.index" popper-class="center_item">
             <template slot="title">{{item.name}}</template>
-             <el-menu-item v-for="child in item.children" :index="child.index" :key="child.index">{{child.name}}</el-menu-item>
+             <el-menu-item v-for="(child, index) in item.children" :key="'sub' + child.index" :index="'/pc/' + item.index + '/' + index" >{{child.name}}</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-col>
@@ -42,6 +42,10 @@ export default {
   computed: {
   },
   methods: {
+    _route (index) {
+      console.log(index)
+      this.$router.push('/pc/detail/' + index)
+    }
   }
 }
 </script>
