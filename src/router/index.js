@@ -7,11 +7,14 @@ import {
 Vue.use(Router)
 
 export default new Router({
+  // scrollBehavior (to, from, savedPosition) {
+  //   return { x: 0, y: 0 }
+  // },
   routes: [
     {
       path: '/',
-      redirect: '/pc/home',
       name: 'default',
+      redirect: '/pc/home',
       component: $import('pc')
     },
     {
@@ -25,14 +28,19 @@ export default new Router({
           component: $import('pc/home')
         },
         {
-          path: '/pc/detail',
-          name: 'detail',
-          component: $import('pc/detail')
+          path: '/pc/aboutCompany',
+          name: 'aboutCompany',
+          component: $import('pc/detail/AboutCompany')
         },
         {
-          path: '/pc/detail/:id',
-          name: 'detail',
-          component: $import('pc/detail')
+          path: '/pc/aboutProduct',
+          name: 'aboutProduct',
+          component: $import('pc/detail/AboutProduct')
+        },
+        {
+          path: '/pc/aboutProduct/:index',
+          name: 'aboutProduct',
+          component: $import('pc/detail/AboutProduct')
         }
       ]
     },

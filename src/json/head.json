@@ -1,16 +1,16 @@
 [
-  {"index": "detail", "name": "关于春藤", "children": []},
-  {"index": "2",
+  {"index": "AboutCompany", "name": "关于春藤", "children": []},
+  {"index": "AboutProduct",
     "name": "产品服务",
     "children": [
-      {"index": "2-1", "name": "专业教学资源库平台"},
-      {"index": "2-2", "name": "职教云平台"},
-      {"index": "2-3", "name": "数字教育资源"},
-      {"index": "2-4", "name": "3D虚拟仿真系列"},
-      {"index": "2-5", "name": "网络培训系统"}
+      {"name": "专业教学资源库平台"},
+      {"name": "职教云平台"},
+      {"name": "数字教育资源"},
+      {"name": "3D虚拟仿真系列"},
+      {"name": "网络培训系统"}
     ]
   },
-  {"index": "3", "name": "解决方案", "children": [
+  {"index": "AboutCase", "name": "解决方案", "children": [
     {"index": "3-1", "name": "院校定制方案"},
     {"index": "3-2", "name": "云平台智慧教育"},
     {"index": "3-3", "name": "在线课程建设"},
